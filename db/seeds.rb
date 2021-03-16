@@ -12,22 +12,28 @@ User.create([
     {name: 'Test', email: 'test@mail.com'}
 ])
 
+#trip belongs to a user, and 
+##listing 
+##no location, 
+##join table
 Trip.create([
-    {location: "Salt Lake City, Utah", start_date: 4/13/2021, end_date: 4/20/2021 },
-    {location: "Brooklyn, New York", start_date: 3/15/2021, end_date: 3/21/2021 },
-    {location: "Detroit, Michigan", start_date: 5/18/2021, end_date: 6/1/2021 },
-    {location: "Seattle, Washington", start_date: 4/13/2021, end_date: 4/20/2021 },
-    {location: "Holland, Michigan", start_date: 3/16/2021, end_date: 4/12/2021 },
-    {location: "Jacksonville, Florida", start_date: 4/13/2021, end_date: null }
+    {start_date: '2021-04-05', end_date: '2021-04-13', user_id: 1, listing_id: 1},
+    {start_date: '2021-05-06', end_date: '2021-05-20', user_id: 2, listing_id: 2 },
+    {start_date: '2021-07-17', end_date: '2021-08-01', user_id: 2, listing_id: 3 },
+    {start_date: '2021-04-13', end_date: '2021-04-21', user_id: 1, listing_id: 4 },
+    {start_date: '2021-08-18', end_date: '2021-09-13', user_id: 2, listing_id: 5 },
+    {start_date: '2020-012-15', end_date: '2021-02-21', user_id:1, listing_id: 6 }
 
 ])
 
-Booking.create([
-    {location: "Jacksonville, Florida", image: "https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2850&q=80", price: 199.99, user_id: 1, trip_id: 6},
-    {location: "Salt Lake City, Utah", image: "https://images.unsplash.com/photo-1519160558534-579f5106e43f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80", price: 59, user_id: 2, trip_id: 1},
-    {location: "Brooklyn, New York", image: "https://images.unsplash.com/photo-1509650840259-72cd4b94cc3b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2734&q=80", price: 200, user_id: 2, trip_id: 2},
-    {location: "Seattle, Washington", image: "https://images.unsplash.com/photo-1525510579144-4844ac3d3a3c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=802&q=80", price: 50, user_id: 1, trip_id: 4},
-    {location: "Detroit, Michigan", image: "https://static.hiphopdx.com/2020/12/201229-Eminem-1093x614.jpg", price: 75, user_id: 2, trip_id: 3},
-    {location: "Holland, Michigan", image: "https://urbanmatter.com/chicago/wp-content/uploads/2018/04/shutterstock_275868293.jpg", price: 88, user_id: 2, trip_id: 5},
+
+#listings #description #displaying all listings #rec component
+Listing.create([
+    {location: "Jacksonville, Florida", image: "https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2850&q=80", price: 199.99, description: "Beachy fun"},
+    {location: "Salt Lake City, Utah", image: "https://images.unsplash.com/photo-1519160558534-579f5106e43f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80", price: 59, description:  "See the mountains"},
+    {location: "Brooklyn, New York", image: "https://images.unsplash.com/photo-1509650840259-72cd4b94cc3b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2734&q=80", price: 200, description: "Best bagels around"},
+    {location: "Seattle, Washington", image: "https://images.unsplash.com/photo-1525510579144-4844ac3d3a3c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=802&q=80", price: 50, description: "It rains a lot here"},
+    {location: "Detroit, Michigan", image: "https://static.hiphopdx.com/2020/12/201229-Eminem-1093x614.jpg", price: 75, description: "Unfornately, Eminem is all we have"},
+    {location: "Holland, Michigan", image: "https://urbanmatter.com/chicago/wp-content/uploads/2018/04/shutterstock_275868293.jpg", price: 88, description: "This year you can watch the Tulip Parade Virtually!"}
 
 ])
