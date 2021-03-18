@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_222401) do
   create_table "trips", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.integer "guest_num"
     t.integer "user_id"
     t.integer "listing_id"
     t.datetime "created_at", precision: 6, null: false
