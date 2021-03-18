@@ -16,15 +16,6 @@ User.create([
 ##listing 
 ##no location, 
 ##join table
-Trip.create([
-    {start_date: '2021-04-05', end_date: '2021-04-13', guest_num: 2, user_id: 1, listing_id: 1},
-    {start_date: '2021-05-06', end_date: '2021-05-20', guest_num: 4, user_id: 2, listing_id: 2 },
-    {start_date: '2021-07-17', end_date: '2021-08-01', guest_num: 1, user_id: 2, listing_id: 3 },
-    {start_date: '2021-04-13', end_date: '2021-04-21', guest_num: 2, user_id: 1, listing_id: 4 },
-    {start_date: '2021-08-18', end_date: '2021-09-13', guest_num: 1, user_id: 2, listing_id: 5 },
-    {start_date: '2020-012-15', end_date: '2021-02-21', guest_num: 3, user_id:1, listing_id: 6 }
-
-])
 
 
 #listings #description #displaying all listings #rec component
@@ -37,3 +28,15 @@ Listing.create([
     {location: "Holland, Michigan", image: "https://urbanmatter.com/chicago/wp-content/uploads/2018/04/shutterstock_275868293.jpg", price: 88, description: "This year you can watch the Tulip Parade Virtually!"}
 
 ])
+
+
+Trip.create([
+    {start_date: '2021-04-05', end_date: '2021-04-13', guest_num: 2, user_id: 1, listing_id: 1},
+    {start_date: '2021-05-06', end_date: '2021-05-20', guest_num: 4, user_id: 2, listing_id: 2 },
+    {start_date: '2021-07-17', end_date: '2021-08-01', guest_num: 1, user_id: 2, listing_id: 3 },
+    {start_date: '2021-04-13', end_date: '2021-04-21', guest_num: 2, user_id: 1, listing_id: 4 },
+    {start_date: '2021-08-18', end_date: '2021-09-13', guest_num: 1, user_id: 2, listing_id: 5 },
+    {start_date: '2020-12-15', end_date: '2021-02-21', guest_num: 3, user_id:1, listing_id: 6 }
+
+])
+
