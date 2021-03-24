@@ -13,8 +13,7 @@ class TripsController < ApplicationController
       #byebug
         #trip.location = Listings.find_or_create_by(location: params[:listing])
         trip.user_id = User.first.id
-        trip.listing_id = Listing.first.id
-#dont keep
+       trip.listing_id = trip_params[:listing_id]
         if trip.save
             render json: trip.to_json(except: [:created_at, :updated_at])
         else 
