@@ -8,9 +8,13 @@ class TripsController < ApplicationController
     end
     
     def create
+        
         trip = Trip.new(trip_params)
-        trip.location = Listings.find_or_create_by(location: params[:listing])
-
+      #byebug
+        #trip.location = Listings.find_or_create_by(location: params[:listing])
+        trip.user_id = User.first.id
+        trip.listing_id = Listing.first.id
+#dont keep
         if trip.save
             render json: trip.to_json(except: [:created_at, :updated_at])
         else 
@@ -28,6 +32,6 @@ class TripsController < ApplicationController
 
     def trip_params
 
-        params.require(:trip).permit(:state_date, :end_date, :guest_num, :user_id, :listing_id)
+        params.require(:trip).permit(:start_date, :end_date, :guest_num, :user_id, :listing_id)
     end
 end
