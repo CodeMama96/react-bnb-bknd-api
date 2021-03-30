@@ -31,7 +31,7 @@ class TripsController < ApplicationController
     def destroy
         trip = Trip.find(params[:id])
         trip.destroy
-        render json: {message: "Successfully deleted"}
+        render json: trip.to_json(except: [:created_at, :updated_at])
     end
     private
 
